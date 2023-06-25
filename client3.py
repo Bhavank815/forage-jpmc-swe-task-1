@@ -40,7 +40,7 @@ def getDataPoint(quote):
 def getRatio(price_a, price_b):
     if (price_b == 0):
         return
-    return price_a / price_b
+    return round((price_a / price_b),5)
 
 
 # Main
@@ -62,7 +62,7 @@ if __name__ == "__main__":
         if "ABC" in price_dict and "DEF" in price_dict:
             ratio = getRatio(price_dict["ABC"], price_dict["DEF"])
             if ratio is not None:
-                print("Ratio %s" %round(ratio,5))
+                print("Ratio %s" %ratio)
 
              #   bhavan_ratio = getRatio(price_dict['ABC'], price_dict['DEF'])  # Calculate bhavan_ratio
               #  if ratio != bhavan_ratio:
